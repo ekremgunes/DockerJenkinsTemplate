@@ -20,4 +20,4 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run("http://:*:1000");
+app.Run("http://*:1000");
