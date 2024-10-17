@@ -1,0 +1,8 @@
+services:
+     testapi:
+       build:
+         context: .
+         dockerfile: Dockerfile
+       ports:
+         - "1000:1000"
+       container_name: c_testapi
