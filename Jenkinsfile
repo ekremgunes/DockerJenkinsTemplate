@@ -25,7 +25,7 @@ pipeline {
             steps {
                 script {
                     // Docker image'ını build et, zaman aşımı kontrolü ile
-                    sh 'timeout 300 docker compose -f ./DockerJenkinsTemplate/docker-compose.yml build '
+                    sh 'timeout 300 docker compose -f ./DockerJenkinsTemplate/docker-compose.yml build --no-cache'
                     // Eğer zaman aşımına uğrarsa build işlemini sonlandır
                     sh '''
                     if [ $? -eq 124 ]; then
